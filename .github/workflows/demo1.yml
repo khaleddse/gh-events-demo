@@ -4,6 +4,11 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - develop
+      - master
+      - 'feat/**' # feat/new feat (branches filter)
 jobs:
   deploy:
     runs-on: ubuntu-latest
